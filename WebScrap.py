@@ -36,7 +36,7 @@ class Coin:
         r = requests.get(url)
         data = r.json()
         ids = []
-        for i in range(0,5):
+        for i in range(0,50):
             ids.append({
                 'id':data['data']['cryptoCurrencyList'][i]['id'],
                 'name':data['data']['cryptoCurrencyList'][i]['name'],
@@ -46,13 +46,13 @@ class Coin:
         coin_id = 0
         print(coin.title())
 
-        for i in range(0,5):
+        for i in range(0,50):
             if ids[i]['name'] == coin.title():
                 coin_id = ids[i]['id']
                 print('\n\n')
                 print(coin_id)
 
-        second_url = f'https://api.coinmarketcap.com/content/v3/news?coins={coin_id}&size=5'
+        second_url = f'https://api.coinmarketcap.com/content/v3/news?coins={coin_id}&size=10'
 
 
         r2 = requests.get(second_url)
