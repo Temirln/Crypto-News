@@ -168,7 +168,7 @@ def login():
     user = Users.query.filter_by(name = name).first()
     if user:
         if password == user.password:
-            token = jwt.encode({'user' : name , 'exp':datetime.utcnow() + timedelta(minuts=30)},str(app.config['SECRET_KEY']))
+            token = jwt.encode({'user' : name , 'exp':datetime.utcnow() + timedelta(minutes=30)},str(app.config['SECRET_KEY']))
             resp = make_response(redirect(url_for('coin'))) 
             resp.set_cookie('tokenn',token)
             session['username'] = name
