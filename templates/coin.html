@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Coin
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2 class="text-warning"> Helo {{session['username']}}</h2>
+   
+    <div style="width: 100%;max-width: 750px;margin: auto;" class="px-2">
+        <form method="post" class="row d-flex justify-content-center p-2">
+            <div class="col-auto p-1">
+                <input type="text" name="coin" class="form-control" placeholder="Enter your Coin name">
+            </div>
+            <div class="col-auto p-1">
+            <button type="submit" class="form-control btn btn-warning">Check</button>
+            </div>
+        </form>
+        <div>
+        {% if coin: %}
+            <h1 class="text-center text-dark p-3 bg-warning rounded ">{{coin.upper()}} NEWS</h1>
+            {% for news in news %}
+            <div class="row g-3 pb-5 p-1 text-warning" style="overflow: hidden;text-overflow: ellipsis;">
+                <div class="col">
+                    
+                    <h1 class="border-bottom border-warning">{{news['title']}}</h1><br>
+                    <p>{{news['news']}}</p>
+                    <h6><a style="white-space:nowrap;overflow: hidden;padding: 5px;" href="{{news['url']}}">{{news['url']}}</a></h6>
+                    <br><br>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Login
+{% endblock %}
+
+{% block content %}
+    <main style="width: 100%;max-width: 350px;padding: 15px;margin: auto;" class="bg-warning p-4 rounded-3 border border-dark border-2">
+        <h1 class="p-3">Login Form</h1>
+        <form method="post">
+            {% if message: %}
+              <p class="border-danger border-2 border rounded">{{message}}</p>
+            {% endif %}
+            <div class="p-3">
+              <input type="text" name="name" class="form-control text-warning bg-dark border-dark" placeholder="Login">
+            </div>
+            <div class="p-3">
+              <input type="password" name="pass" class="form-control text-warning bg-dark border-dark" placeholder="Password">
+            </div>
+            <div class="p-3">
+                <a href="/register" class="form-check-label">Don't have account?</a>
+            </div>
+            
+            <button type="submit" class=" btn btn-primary">Log In</button>
+          </form>
+    </main>
+{% endblock %}
