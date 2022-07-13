@@ -1,6 +1,6 @@
 # Crypto-News 
 
-#Link to the site
+# Link to the site
     http://crypto-news-temirlan.herokuapp.com/
  
 # Purpose 
