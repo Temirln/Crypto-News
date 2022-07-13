@@ -1,4 +1,7 @@
-# Crypto-News
+# Crypto-News 
+
+#Link to the site
+    http://crypto-news-temirlan.herokuapp.com/
  
 # Purpose 
     The project collects the latest five news related to the cryptocurrency you entered and lists the news
