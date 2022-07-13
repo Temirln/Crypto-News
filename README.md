@@ -33,4 +33,8 @@ Flask-SQLAlchemy (https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 
 Enter your crypto currency
 
+![image](https://user-images.githubusercontent.com/74649499/178748932-4b5faf12-337b-42a9-af6e-61b6aebc0e34.png)
+
 Get list of news
+
+![image](https://user-images.githubusercontent.com/74649499/178749356-36a8bce4-98c7-49ca-89e1-9a3b77c802f5.png)
